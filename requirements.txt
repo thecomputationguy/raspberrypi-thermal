@@ -1,0 +1,8 @@
+numpy>=1.16.5
+RPI.GPIO
+Adafruit-Blinka
+adafruit-circuitpython-mlx90640
+opencv-python
+cmapy
+collections
+multiprocessing
