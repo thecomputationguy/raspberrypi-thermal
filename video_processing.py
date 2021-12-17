@@ -51,8 +51,7 @@ def get_video_multithreaded(device, original_shape, required_shape):
     cv2.destroyAllWindows()
 
 if __name__ == '__main__':
-    path = "config.json"
-    if (os.path.exists(path)):
+    if (os.path.exists("config.json")):
         print("Reading Config File")
         with open("config.json", 'r') as jsonfile:
             config = json.load(jsonfile)
