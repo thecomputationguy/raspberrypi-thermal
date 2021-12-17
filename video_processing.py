@@ -5,6 +5,8 @@ import time, board, busio
 import adafruit_mlx90640
 import numpy as np
 import cmapy
+import json
+import os
 
 def apply_transformations(image, required_shape):
     width = required_shape[0]
@@ -19,7 +21,10 @@ def temperature_to_image(frame, T_min, T_max):
     image.shape = (24,32)
     return image
 
-def get_video(device, original_shape, required_shape):
+def get_video_sequential(device, original_shape, required_shape):
+    pass
+
+def get_video_multithreaded(device, original_shape, required_shape):
     frame = np.zeros((original_shape[0] * original_shape[1], ))
     thread_num = cv2.getNumberOfCPUs()
     print("Total CPUs : ", thread_num)
@@ -46,6 +51,15 @@ def get_video(device, original_shape, required_shape):
     cv2.destroyAllWindows()
 
 if __name__ == '__main__':
+    path = "config.json"
+    if (os.path.exists()):
+        print("Reading Config File")
+        with open("config.json", 'r') as jsonfile:
+            config = json.load(jsonfile)
+        print(config)
+    else:
+        raise FileNotFoundError
+    
     print('Running Program')
     i2c = busio.I2C(board.SCL, board.SDA, frequency=1000000)
     mlx = adafruit_mlx90640.MLX90640(i2c)
@@ -53,4 +67,4 @@ if __name__ == '__main__':
     mlx_shape = (24,32)
     mlx_interp_val = 10
     mlx_interp_shape = (mlx_shape[0] * mlx_interp_val, mlx_shape[1] * mlx_interp_val)    
-    get_video(mlx, mlx_shape, mlx_interp_shape)
+    #get_video_sequential(mlx, mlx_shape, mlx_interp_shape)
