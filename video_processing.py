@@ -65,6 +65,6 @@ if __name__ == '__main__':
     mlx = adafruit_mlx90640.MLX90640(i2c)
     mlx.refresh_rate = adafruit_mlx90640.RefreshRate.REFRESH_4_HZ
     mlx_shape = (24,32)
-    mlx_interp_val = 10
+    mlx_interp_val = 20
     mlx_interp_shape = (mlx_shape[0] * mlx_interp_val, mlx_shape[1] * mlx_interp_val)    
     #get_video_sequential(mlx, mlx_shape, mlx_interp_shape)
