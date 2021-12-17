@@ -1,0 +1,6 @@
+{
+    "mlx_shape": "(24,32)",
+    "scale": "10",
+    "frequency": "1000000",
+    "refresh_rate": "REFRESH_4_HZ"
+  }
