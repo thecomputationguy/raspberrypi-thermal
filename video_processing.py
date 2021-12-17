@@ -52,7 +52,7 @@ def get_video_multithreaded(device, original_shape, required_shape):
 
 if __name__ == '__main__':
     path = "config.json"
-    if (os.path.exists()):
+    if (os.path.exists(path)):
         print("Reading Config File")
         with open("config.json", 'r') as jsonfile:
             config = json.load(jsonfile)
