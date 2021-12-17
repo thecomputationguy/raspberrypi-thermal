@@ -4,5 +4,5 @@
     "scale": 30,
     "frequency": 1000000,
     "refresh_rate": "adafruit_mlx90640.RefreshRate.REFRESH_4_HZ",
-    "version": "parallel"
+    "parallel": 1
   }
