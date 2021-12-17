@@ -1,6 +1,8 @@
 {
-    "mlx_shape": "(24,32)",
-    "scale": "10",
-    "frequency": "1000000",
-    "refresh_rate": "REFRESH_4_HZ"
+    "mlx_height": 24,
+    "mlx_width": 32,
+    "scale": 30,
+    "frequency": 1000000,
+    "refresh_rate": "adafruit_mlx90640.RefreshRate.REFRESH_4_HZ",
+    "version": "parallel"
   }
