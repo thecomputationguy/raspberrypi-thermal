@@ -100,7 +100,7 @@ def process_video_multithreaded(device, original_shape, required_shape):
     """
     frame = np.zeros((original_shape[0] * original_shape[1], ))
     thread_num = cv2.getNumberOfCPUs()
-    print("Runnig Paralle Version ; Total CPUs : ", thread_num)
+    print("Runnig Parallel Version ; Total CPUs : ", thread_num)
     pool = ThreadPool(processes=thread_num)
     pending_task = deque()
 
