@@ -5,18 +5,20 @@ import os
 import helper_functions as hp
 
 if __name__ == '__main__':
+
+    # Read the config file
     if (os.path.exists("config.json")):
         print("Reading Config File")
         with open("config.json", 'r') as jsonfile:
             config = json.load(jsonfile)
+        frequency = config['frequency']
+        scale = config['scale']
+        refresh_rate = config['refresh_rate']
+        parallel = config['parallel']
     else:
-        raise FileNotFoundError
-    
-    frequency = config['frequency']
-    scale = config['scale']
-    refresh_rate = config['refresh_rate']
-    parallel = config['parallel']
-    
+        raise FileNotFoundError   
+
+    # Set the hardware parameters as read from the config file
     print('Starting Program. At any point, press the S key to save an image or Q to exit.')
     i2c = busio.I2C(board.SCL, board.SDA, frequency=frequency)
     mlx = adafruit_mlx90640.MLX90640(i2c)
