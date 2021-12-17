@@ -1,5 +1,7 @@
 ## Adafruit_CircuitPython_MLX90640
-Simple Python program using OpenCV and multithreading to perform thermal imaging using the Adafruit MLX90640 Thermal camera. The work has been inspired by a few public projects, mentioned in the next section. The multithreading functionalities have been added by myself, following the ideas in https://github.com/opencv/opencv/blob/master/samples/python/video_threaded.py
+A Python program using OpenCV and multithreading to perform thermal imaging using the Adafruit MLX90640 Thermal camera. The work has been inspired by a few public projects, mentioned in the next section. The multithreading functionalities have been added by myself, following the ideas in:
+
+    1. https://github.com/opencv/opencv/blob/master/samples/python/video_threaded.py
 
 NOTE (17th Dec 2021): The multithreading, as of now, does not give any significant performance boosts, despite my Raspberry Pi (3b+) having a quad-core ARM CPU. This needs further investigation.
 
@@ -18,6 +20,7 @@ Ensure that the field "parallel" is set to 1, in the config.json file. Otherwise
 
 ## Running the Program
 On a linux terminal:
+
     1. Change to the directory containing the files. Typically, 'cd /home/.../raspberrypi_thermal'. Make sure that the config.json file is also located in the same directory.
 
     2. type 'python3 video_processing.py' and press enter.
