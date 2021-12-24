@@ -33,9 +33,9 @@ On a linux terminal:
 
     1. Thermal Selfie
 
-    ![selfie](/screenshots/thermal-selfie.jpeg)
+    ![selfie](screenshots/thermal-selfie.jpeg)
 
     2. Radiator (water operated)
 
-    ![radiator](/screenshots/radiator.jpeg)
+    ![radiator](screenshots/radiator.jpeg)
 
