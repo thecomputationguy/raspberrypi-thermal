@@ -27,3 +27,15 @@ On a linux terminal:
 
     3. To save a screenshot from the video output, just press the S button on your keyboard when the program is running. To quit the program, press the Q button.
 
+## Screenshot
+
+(Please note that the interpolation and colormap are fixed in this version of the code. At the moment, it has to be changed manually from the file 'helper_functions.py')
+
+    1. Thermal Selfie
+
+    ![selfie](/screenshots/thermal-selfie.jpeg)
+
+    2. Radiator (water operated)
+
+    ![radiator](/screenshots/radiator.jpeg)
+
